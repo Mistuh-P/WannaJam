@@ -1,0 +1,36 @@
+{
+  "name": "project_1",
+  "version": "1.0.0",
+  "description": "WDI Seattle 02 Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mistuh-P/project_1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mistuh-P/project_1/issues"
+  },
+  "homepage": "https://github.com/Mistuh-P/project_1",
+  "dependencies": {
+    "bcrypt": "^0.8.2",
+    "body-parser": "^1.12.2",
+    "cheerio": "^0.19.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.3.1",
+    "express": "^4.12.3",
+    "express-session": "^1.11.1",
+    "express-sessions": "^1.0.5",
+    "geocoder": "^0.2.2",
+    "multer": "^0.1.8",
+    "pg": "^4.3.0",
+    "pg-hstore": "^2.3.2",
+    "request": "^2.55.0",
+    "sequelize": "^2.0.5",
+    "sequelize-cli": "^1.6.0"
+  }
+}

@@ -1,0 +1,14 @@
+
+
+<input type="checkbox" name="insturments[]" value="3"> Acoustic Guitar
+<input type="checkbox" name="insturments[]" value="4"> Electric Guitar
+<input type="checkbox" name="insturments[]" value="5"> Lap Steel
+
+
+
+//if Electric Guitar and Lap Steel are checked
+req.body.insturments = [4,5]
+
+db.user.find(req.getUser().id).then(function(user){
+  user.setInsturments([4,5]);
+})

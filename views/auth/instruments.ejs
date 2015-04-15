@@ -1,0 +1,61 @@
+<% include ../partials/header.ejs %>
+
+
+<div align='center' class="col-md-8 inst-div">
+    <h1>What do you play?</h1>
+
+    <% include ../partials/alerts.ejs%>
+    <hr>
+    <form class="form" method="post" action="/auth/instruments">
+        <input class='inst-check' type="checkbox" name="instruments" value="3"> Acoustic Guitar
+        <input class='inst-check' type="checkbox" name="instruments" value="4"> Electric Guitar
+        <input class='inst-check' type="checkbox" name="instruments" value="14"> Bass Guitar
+        <br><br>
+        <input class='inst-check' type="checkbox" name="instruments" value="6"> Banjo
+        <input class='inst-check' type="checkbox" name="instruments" value="7"> Mandolin
+        <input class='inst-check' type="checkbox" name="instruments" value="5"> Lap Steel
+        <br><br>
+        <input class='inst-check' type="checkbox" name="instruments" value="8"> Drums
+        <input class='inst-check' type="checkbox" name="instruments" value="9"> Aux Percussion
+        <br><br>
+        <input class='inst-check' type="checkbox" name="instruments" value="10"> Keys
+        <input class='inst-check' type="checkbox" name="instruments" value="11"> Organ
+        <br><br>
+        <input class='inst-check' type="checkbox" name="instruments" value="12"> Vocals
+        <input class='inst-check' type="checkbox" name="instruments" value="13"> Background Vocals
+        <br><br>
+        <input class='inst-check' type="checkbox" name="instruments" value="16"> Trumpet
+        <input class='inst-check' type="checkbox" name="instruments" value="17"> Trombone
+        <input class='inst-check' type="checkbox" name="instruments" value="18"> Saxophone
+        <br><br>
+
+
+        <input type="submit" value="rock on" class="btn btn-primary">
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include ../partials/footer.ejs %>

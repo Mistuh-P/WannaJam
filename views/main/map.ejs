@@ -1,0 +1,58 @@
+<% include ../partials/header %>
+
+
+
+<% if(user) { %>
+Hello, <b><%= typeof user.name === 'string' ? user.name : 'Unknown' %></b>.
+<a href="/auth/logout">logout!!</a>
+<% } %>
+
+
+<h1>Musicians Near You</h1>
+
+
+<nav class='menu-ui'>
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Acoustic Guitar"> Acoustic Guitar
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Electric Guitar"> Electric Guitar
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Bass Guitar"> Bass Guitar
+        <br><br>
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Banjo"> Banjo
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Mandolin"> Mandolin
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Lap Steel"> Lap Steel
+        <br><br>
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Drums"> Drums
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Aux Percussion"> Aux Percussion
+        <br><br>
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Keys"> Keys
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Organ"> Organ
+        <br><br>
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Vocals"> Vocals
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Background Vocals"> Background Vocals
+        <br><br>
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Trumpet"> Trumpet
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Trombone"> Trombone
+        <input class='filter-checkbox' type="checkbox" name="instruments" checked value="Saxophone"> Saxophone
+        <br><br>
+
+</nav>
+<!-- this is where you put your map stuff -->
+
+<div class="container">
+
+    <div id="map"></div>
+  </div>
+
+  <script>
+    var myPoints = <%- JSON.stringify(location) %>;
+    // console.log("what is this?", location)
+    drawMap(myPoints)
+  </script>
+
+
+
+
+
+
+
+<% include ../partials/footer %>
+
