@@ -78,6 +78,8 @@ module.exports = function(sequelize, DataTypes) {
 
           user.lat = data.results[0].geometry.location.lat
           user.long = data.results[0].geometry.location.lng
+          sendback(null,user);
+
 
                 })
       }
