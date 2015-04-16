@@ -41,8 +41,8 @@
 }
 
 #copywrite{
-  color: white;
-  background:rgba(0,0,0,0.4);
+  color: black;
+
 }
 
 
@@ -50,3 +50,49 @@
   float: right;
 }
 
+#brand-header{
+  font-family: 'Lobster', cursive;
+  font-size: 60px;
+}
+
+#main-text{
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-but{
+  height: 100px;
+  width: 250px;
+  font-size: 40px;
+  color: black;
+  font-family: 'Lobster', cursive;
+  padding-top: 15px;
+  border-color: black;
+
+}
+
+.log-form{
+  text-align: center;
+}
+
+.log-bt{
+  color: black;
+  font-family: 'Lobster', cursive;
+  height: 50px;
+  width: 80px;
+  font-size: 20px;
+
+  border-color: black;
+
+}
+
+.log-screen{
+  padding-bottom: 50px;
+}
+
+#daniel{
+  margin-top: 100px;
+}
+
+.index-screen{
+  margin-bottom: 130px;
+}
