@@ -1,7 +1,21 @@
 <% include ../partials/header.ejs %>
 
 
+<form class="form" method="post" action="/auth/edit">
 
+        <input type="text" class="form-control" placeholder="Enter your name" name="name">
+        <br><br>
+        <input type="text" class="form-control" placeholder="Enter your street address" name="street">
+        <br><br>
+        <input type="text" class="form-control" placeholder="Enter your city" name="city">
+        <br><br>
+        <input type="text" class="form-control" placeholder="Enter your state code example: CA (california)" name="state">
+        <br><br>
+        <input type="text" class="form-control" placeholder="Describe yourself " name="bio">
+        <br><br>
+
+        <input type="submit" value="save changes" class="btn btn-primary">
+    </form>
 
 
 

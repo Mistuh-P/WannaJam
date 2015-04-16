@@ -68,7 +68,21 @@ module.exports = function(sequelize, DataTypes) {
             sendback(null,user);
           })
         })
+      },
+      beforeUpdate: function(user,options,sendback){
+        var addr = user.street+',' + user.city+','+user.state
+
+
+        geocoder.geocode(addr, function ( err, data ) {
+
+
+          user.lat = data.results[0].geometry.location.lat
+          user.long = data.results[0].geometry.location.lng
+
+                })
       }
+
+
     }
   });
   return user;

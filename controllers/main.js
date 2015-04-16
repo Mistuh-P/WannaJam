@@ -10,6 +10,44 @@ router.get('/',function(req,res){
 });
 
 
+router.get('/auth/edit', function(req,res){
+  var user = req.getUser();
+
+  res.render('auth/edit', {user:user})
+})
+
+router.post('/auth/edit', function(req,res){
+  var user = req.getUser();
+
+  db.user.find(req.getUser().id).then(function(user){
+  db.user.update({
+     name:req.body.name,
+     street:req.body.street,
+     city:req.body.city,
+     state:req.body.state,
+     bio:req.body.bio
+
+  }, {where:
+      {id: user.id}
+      })
+}).then(function(users){
+
+  var cleanUsers=users.map(function(location){
+    return {
+      name:location.name,
+      lat:location.lat,
+      long:location.long,
+      bio:location.bio,
+      instruments:location.instruments.map(function(i){
+        return i.name;
+      })
+    }
+  })
+})
+  res.redirect('/main/map')
+})
+
+
 
 router.get('/main/map', function(req,res){
   var user = req.getUser();

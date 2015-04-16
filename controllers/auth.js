@@ -134,6 +134,10 @@ router.post('/instruments',function(req,res){
 });
 
 
+
+
+
+
 //GET /auth/logout
 //logout logged in user
 router.get('/logout',function(req,res){
