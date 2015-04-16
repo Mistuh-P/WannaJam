@@ -71,7 +71,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       beforeUpdate: function(user,options,sendback){
         var addr = user.street+',' + user.city+','+user.state
-
+console.log("this works")
 
         geocoder.geocode(addr, function ( err, data ) {
 
