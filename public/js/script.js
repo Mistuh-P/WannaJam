@@ -51,7 +51,7 @@ console.log(showingItems)
             'marker-symbol': 'music',
             'marker-color': '#fa0'
           })
-        }).addTo(markerLayer).bindPopup(marker.name +  "<br>" + marker.bio+ "<br>" + marker.instruments.join(", "))
+        }).addTo(markerLayer).bindPopup("Name: "+marker.name+ "<br>" + "Plays: "+ marker.instruments.join(", ") +  "<br>" + "Bio: " + marker.bio)
 
         // mapMarkers.push({data:marker,marker:thisMarker});
       })

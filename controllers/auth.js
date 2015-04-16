@@ -61,7 +61,6 @@ router.post('/signup',function(req,res){
               street:req.body.street,
               city:req.body.city,
               state:req.body.state,
-              zip:req.body.zip,
               bio:req.body.bio};
 
     db.user.findOrCreate({where:userQuery,defaults:userData})
@@ -72,7 +71,7 @@ router.post('/signup',function(req,res){
                         email:user.email,
                         name:user.name
                     };
-            req.flash('success','Awesome. Just a little more.');
+            req.flash('success','Awesome. What do you play?');
             res.redirect('/auth/instruments');
         }else{
             req.flash('danger','e-mail already exists.');
