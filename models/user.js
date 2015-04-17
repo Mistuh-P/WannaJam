@@ -26,12 +26,12 @@ module.exports = function(sequelize, DataTypes) {
   var user = sequelize.define("user", {
     email: {
       type: DataTypes.STRING,
-      // validate: {
-      //   isEmail: {
-      //     args: true,
-      //     msg: 'Please enter a valid email'
-      //   }
-      // }
+      validate: {
+        isEmail: {
+          args: true,
+          msg: 'Please enter a valid email'
+        }
+      }
     },
     password: {
       type: DataTypes.STRING,
