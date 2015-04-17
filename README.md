@@ -5,19 +5,19 @@ Wannajam is a web-app that allows musicians to find other musicians in their are
 
 It is an app created on node that uses a number of technologies including:
 
-bcrypt
-body-parser
-connect-flash
-express
-express-sessions
-geocoder
-pg
-pg-hstore
-request
-sequelize
-sequelize-cli
-bootstrap
-google-fonts
+bcrypt,
+body-parser,
+connect-flash,
+express,
+express-sessions,
+geocoder,
+pg,
+pg-hstore,
+request,
+sequelize,
+sequelize-cli,
+bootstrap,
+google-fonts,
 
 The two APIs currently being used by the app are Google's Geocoding API (through geocoder) and Leaflet
 
