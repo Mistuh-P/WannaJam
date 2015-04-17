@@ -1,22 +1,28 @@
 <% include ../partials/header.ejs %>
 
 
+<div class='container col-md-6 col-md-offset-3'>
+<% include ../partials/alerts.ejs%>
 <form class="form" method="post" action="/auth/edit">
+        <b>Name:</b>
+        <input id="sign-up-form" type="text" class="form-control" value="<%= user.name %>" placeholder="Enter your name" name="name">
+        <br><br>
+        <b>Street Address:</b>
+        <input id="sign-up-form" type="text" class="form-control" value="<%= user.street %>" placeholder="Enter your street address" name="street">
+        <br><br>
+        <b>City:</b>
+        <input id="sign-up-form" type="text" class="form-control" value="<%= user.city %>" placeholder="Enter your city" name="city">
+        <br><br>
+        <b>State Code:</b>
+        <input id="sign-up-form" type="text" class="form-control" value="<%= user.state %>" placeholder="Enter your state code example: CA (california)" name="state">
+        <br><br>
+        <b>Bio:</b>
+        <input id="sign-up-form bio-form" type="text" class="form-control" value="<%= user.bio %>" placeholder="Describe yourself " name="bio">
+        <br><br>
 
-        <input type="text" class="form-control" value="<%= user.name %>" placeholder="Enter your name" name="name">
-        <br><br>
-        <input type="text" class="form-control" value="<%= user.street %>" placeholder="Enter your street address" name="street">
-        <br><br>
-        <input type="text" class="form-control" value="<%= user.city %>" placeholder="Enter your city" name="city">
-        <br><br>
-        <input type="text" class="form-control" value="<%= user.state %>" placeholder="Enter your state code example: CA (california)" name="state">
-        <br><br>
-        <input type="text" class="form-control" value="<%= user.bio %>" placeholder="Describe yourself " name="bio">
-        <br><br>
-
-        <input type="submit" value="save changes" class="btn btn-primary">
+        <input id="sign-up-form" type="submit" value="Do it" class="log-bt btn btn-warning">
     </form>
-
+</div>
 
 
 

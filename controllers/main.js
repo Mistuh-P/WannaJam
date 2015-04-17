@@ -40,6 +40,7 @@ router.post('/auth/edit', function(req,res){
 
 
 
+
 router.get('/main/map', function(req,res){
   var user = req.getUser();
   db.user.findAll({include:[db.instrument]})
@@ -51,6 +52,7 @@ router.get('/main/map', function(req,res){
       lat:location.lat,
       long:location.long,
       bio:location.bio,
+      email:location.email,
       instruments:location.instruments.map(function(i){
         return i.name;
       })

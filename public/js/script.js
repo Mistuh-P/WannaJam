@@ -26,7 +26,7 @@ var drawMap = function(markers) {
       $('.filter-checkbox:checked').each(function(item){
         // console.log(item.val())
 
-console.log(showingItems)
+// console.log(showingItems)
 
           // showingItems.push($('.filter-checkbox:checked').val())
           showingItems.push($(this).val())
@@ -36,7 +36,7 @@ console.log(showingItems)
         //add checkbox value to showing items array
       })
 
-        console.log(typeof $('.filter-checkbox:checked').val())
+        // console.log(typeof $('.filter-checkbox:checked').val())
 
       markers.filter(function(marker){
         return marker.instruments.filter(function(instrument){
@@ -51,7 +51,7 @@ console.log(showingItems)
             'marker-symbol': 'music',
             'marker-color': '#fa0'
           })
-        }).addTo(markerLayer).bindPopup("Name: "+marker.name+ "<br>" + "Plays: "+ marker.instruments.join(", ") +  "<br>" + "Bio: " + marker.bio)
+        }).addTo(markerLayer).bindPopup("Name: "+marker.name+ "<br>" + "Plays: "+ marker.instruments.join(", ") +  "<br>" + "Bio: " + marker.bio +  "<br>" + "Email: " + marker.email)
 
         // mapMarkers.push({data:marker,marker:thisMarker});
       })

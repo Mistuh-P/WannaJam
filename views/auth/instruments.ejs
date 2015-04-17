@@ -1,12 +1,12 @@
 <% include ../partials/header.ejs %>
 
 
-<div align='center' class="col-md-8 inst-div">
-    <h1>What do you play?</h1>
+<div align='center' class="col-md-8 inst-div col-md-offset-2">
+    <h1 id='main-text'>What do you play?</h1>
 
     <% include ../partials/alerts.ejs%>
     <hr>
-    <form class="form" method="post" action="/auth/instruments">
+    <form class="inst-form form" method="post" action="/auth/instruments">
         <input class='inst-check' type="checkbox" name="instruments" value="3"> Acoustic Guitar
         <input class='inst-check' type="checkbox" name="instruments" value="4"> Electric Guitar
         <input class='inst-check' type="checkbox" name="instruments" value="14"> Bass Guitar
@@ -30,7 +30,7 @@
         <br><br>
 
 
-        <input type="submit" value="rock on" class="btn btn-primary">
+        <input type="submit" value="rock on" class="log-bt btn btn-warning">
     </form>
 </div>
 

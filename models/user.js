@@ -24,7 +24,15 @@ var geocoder = require('geocoder');
 "use strict";
 module.exports = function(sequelize, DataTypes) {
   var user = sequelize.define("user", {
-    email: DataTypes.STRING,
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: {
+          args: true,
+          msg: 'Please enter a valid email'
+        }
+      }
+    },
     password: {
       type: DataTypes.STRING,
       validate: {
@@ -34,15 +42,55 @@ module.exports = function(sequelize, DataTypes) {
         }
       }
     },
-    name: DataTypes.STRING,
-    street: DataTypes.STRING,
-    city: DataTypes.STRING,
-    state: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [1,100],
+          msg: 'Please enter a name'
+        }
+      }
+    },
+    street:{
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args:[1,100],
+          msg: 'Please enter a street address'
+        }
+      }
+    },
+    city: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args:[1,100],
+          msg: 'Please enter a city'
+        }
+      }
+    },
+    state: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args:[2,2],
+          msg: 'State Code must be 2 letters'
+        }
+      }
+    },
     zip: DataTypes.INTEGER,
     lat: DataTypes.STRING,
     long: DataTypes.STRING,
-    bio: DataTypes.STRING
-  },
+    bio: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [1,200],
+          msg: 'Please enter a bio'
+        }
+      }
+  }
+},
   {
     classMethods: {
       associate: function(models) {
@@ -71,7 +119,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       beforeUpdate: function(user,options,sendback){
         var addr = user.street+',' + user.city+','+user.state
-console.log("this works")
+// console.log("this works")
 
         geocoder.geocode(addr, function ( err, data ) {
 

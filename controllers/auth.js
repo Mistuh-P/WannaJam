@@ -113,7 +113,7 @@ router.get('/instruments',function(req,res){
 
 router.post('/instruments',function(req,res){
 
-    console.log('body',req.body);
+    // console.log('body',req.body);
 
     // var user = req.getUser().id check if user is logged in before proceeding.
     db.user.find(req.getUser().id).then(function(user){

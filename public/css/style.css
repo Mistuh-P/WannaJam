@@ -47,7 +47,15 @@
 
 
 #logout-button{
-  float: right;
+margin-right: 20px;
+}
+
+#edit-info{
+margin-right: 20px;
+}
+
+#edit-instruments{
+margin-right: 20px;
 }
 
 #brand-header{
@@ -85,6 +93,28 @@
 
 }
 
+.log-bt1{
+  color: black;
+  font-family: 'Lobster', cursive;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+
+  border-color: black;
+
+}
+
+.log-bt2{
+  color: black;
+  font-family: 'Lobster', cursive;
+  height: 50px;
+  width: 150px;
+  font-size: 20px;
+
+  border-color: black;
+
+}
+
 .log-screen{
   padding-bottom: 50px;
 }
@@ -95,4 +125,33 @@
 
 .index-screen{
   margin-bottom: 130px;
+}
+
+/*.sign-up-div{
+  margin-left: 240px;
+}*/
+
+#sign-up-form{
+  text-align: center;
+}
+
+.inst-form{
+  background:rgba(0,0,0,0.4);
+ color: white;
+ padding: 20px;
+ width: 60%;
+}
+
+input.inst-check{
+  margin-left: 10px;
+ background:rgba(0,0,0,0.4);
+}
+
+#user-bar{
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#bio-form{
+  height: 40px;
 }

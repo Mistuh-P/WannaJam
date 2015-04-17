@@ -1,28 +1,45 @@
 <% include ../partials/header.ejs %>
-<div class="col-md-6">
-    <h1>Sign up!</h1>
+<div class="sign-up-div col-md-6 col-md-offset-3">
+
+        <h1 id='main-text'>Let's talk about you.</h1>
 
     <% include ../partials/alerts.ejs%>
     <hr>
     <form class="form" method="post" action="/auth/signup">
-        <input type="text" class="form-control" placeholder="Enter your e-mail" name="email">
+        <b>Email:</b>
+        <input id="sign-up-form" type="text" class="form-control" placeholder="Enter your e-mail" name="email">
         <br><br>
-        <input type="password" class="form-control" placeholder="Choose a password" name="password">
+        <b>Password:</b>
+
+        <input id="sign-up-form" type="password" class="form-control" placeholder="Choose a password" name="password">
         <br><br>
-        <input type="password" class="form-control" placeholder="Re-type your password" name="password2">
+        <b>Retype Password:</b>
+
+        <input id="sign-up-form" type="password" class="form-control" placeholder="Re-type your password" name="password2">
         <br><br>
-        <input type="text" class="form-control" placeholder="Enter your name" name="name">
+        <b>Name:</b>
+
+        <input id="sign-up-form" type="text" class="form-control" placeholder="Enter your name" name="name">
         <br><br>
-        <input type="text" class="form-control" placeholder="Enter your street address" name="street">
+        <b>Street Address:</b>
+
+        <input id="sign-up-form" type="text" class="form-control" placeholder="Enter your street address" name="street">
         <br><br>
-        <input type="text" class="form-control" placeholder="Enter your city" name="city">
+        <b>City:</b>
+
+        <input id="sign-up-form" type="text" class="form-control" placeholder="Enter your city" name="city">
         <br><br>
-        <input type="text" class="form-control" placeholder="Enter your state code example: CA (california)" name="state">
+        <b>State Code:</b>
+
+        <input id="sign-up-form" type="text" class="form-control" placeholder="Enter your state code example: CA (california)" name="state">
         <br><br>
-        <input type="text" class="form-control" placeholder="Describe yourself " name="bio">
+        <b>Bio:</b>
+
+        <input id="sign-up-form" type="text" class="form-control" placeholder="Describe yourself " name="bio">
         <br><br>
 
-        <input type="submit" value="sign up" class="btn btn-primary">
+        <input type="submit" value="Do it" class="log-bt btn btn-warning">
     </form>
+
 </div>
 <% include ../partials/footer.ejs %>
