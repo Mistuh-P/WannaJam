@@ -3,7 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var flash = require('connect-flash');
-var multer  = require('multer')
+
 
 //configure express
 var app = express();

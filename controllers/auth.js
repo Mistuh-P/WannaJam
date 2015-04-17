@@ -106,11 +106,13 @@ router.post('/signup',function(req,res){
 });
 
 //GET /auth/instruments
-//display sign up form
+//display instruments form
 router.get('/instruments',function(req,res){
     res.render('auth/instruments');
 });
 
+// POST
+// set instruments played to user logged in
 router.post('/instruments',function(req,res){
 
     // console.log('body',req.body);
