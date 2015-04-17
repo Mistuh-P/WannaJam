@@ -12,12 +12,7 @@ app.set('view engine','ejs');
 //load middleware
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:false}));
-app.use(multer({ dest: './uploads/'}))
-app.use(session({
-  secret:'dsalkfjasdflkjgdfblknbadiadsnkl',
-  resave: false,
-  saveUninitialized: true
-}));
+
 app.use(flash());
 
 //custom middleware - is user logged in
