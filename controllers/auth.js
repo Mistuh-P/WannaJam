@@ -3,13 +3,13 @@ var express = require('express');
 var bcrypt = require('bcrypt');
 var router = express.Router();
 
-//GET /auth/login
+
 //display login form
 router.get('/login',function(req,res){
     res.render('auth/login');
 });
 
-//POST /login
+
 //process login data and login user
 router.post('/login',function(req,res){
     db.user.find({where:{email:req.body.email}})
@@ -20,7 +20,7 @@ router.post('/login',function(req,res){
                 if(err) throw err;
 
                 if(result){
-                    //store user to session!!
+                    //store user to session
                     req.session.user={
                         id:user.id,
                         email:user.email,
@@ -79,7 +79,7 @@ router.post('/signup',function(req,res){
         }
 
     }).catch(function(error){
-        //NOT COVERED IN CLASS
+
         //handle validation errors and create flash
         //messages
         if(error){
@@ -98,39 +98,27 @@ router.post('/signup',function(req,res){
         res.redirect('/auth/signup');
     })
 
-
-    //do sign up here (add user to database)
-    // res.send(req.body);
     //user is signed up forward them to the home page
-    // res.redirect('/');
-});
+   });
 
-//GET /auth/instruments
+
 //display instruments form
 router.get('/instruments',function(req,res){
     res.render('auth/instruments');
 });
 
-// POST
+
 // set instruments played to user logged in
 router.post('/instruments',function(req,res){
-
-    // console.log('body',req.body);
-
     // var user = req.getUser().id check if user is logged in before proceeding.
     db.user.find(req.getUser().id).then(function(user){
-        // console.log("This is what we want", user.get())
-
-   //      var instruments = req.params.instruments;
-   // console.log(typeof(instruments), instruments);
-        // for(var i=0;i<instruments.length;i++){
 
         db.instrument.findAll({where:{
             id:req.body.instruments
-        }}).then(function(instruments){
-            user.setInstruments(instruments);
-            res.redirect('/main/map');
-        })
+                }}).then(function(instruments){
+                    user.setInstruments(instruments);
+                        res.redirect('/main/map');
+         })
 
     })
 });
@@ -140,7 +128,7 @@ router.post('/instruments',function(req,res){
 
 
 
-//GET /auth/logout
+
 //logout logged in user
 router.get('/logout',function(req,res){
     delete req.session.user;

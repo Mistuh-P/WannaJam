@@ -39,6 +39,10 @@ router.post('/auth/edit', function(req,res){
 })
 
 
+router.get('/about', function(req,res){
+  res.render('main/about')
+})
+
 
 
 router.get('/main/map', function(req,res){

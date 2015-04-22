@@ -42,6 +42,7 @@
 
 #copywrite{
   color: black;
+  /*padding-right: 50px;*/
 
 }
 
@@ -77,6 +78,29 @@ margin-right: 20px;
   border-color: black;
 
 }
+
+.about-but{
+  height: 40px;
+  width: 70px;
+  font-size: 20px;
+  color: black;
+  font-family: 'Lobster', cursive;
+  padding-bottom: 20px;
+  border-color: black;
+
+}
+
+.about{
+  width: 50%;
+}
+
+#info{
+  background:rgba(0,0,0,0.4);
+  color: white;
+  font-family: 'Lobster', cursive;
+
+}
+
 
 .log-form{
   text-align: center;

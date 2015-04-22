@@ -31,7 +31,7 @@ app.use(function(req,res,next){
 });
 
 
-//NOT COVERED IN CLASS!!!
+
 //custom middleware for alerts
 app.use(function(req,res,next){
 
@@ -45,10 +45,15 @@ app.use(function(req,res,next){
   next();
 })
 
+
 //load routes
 app.use('/',require('./controllers/main.js'));
 app.use('/auth',require('./controllers/auth.js'));
 
+// working on error 404 messages
+app.use(function(req, res, next){
+   res.status(404).render('main/404', {title: "Sorry, page not found."});
+});
 
 //listen for connections
 app.listen(process.env.PORT || 3000);
