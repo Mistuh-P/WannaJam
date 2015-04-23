@@ -28,6 +28,7 @@ router.post('/login',function(req,res){
                     };
                     req.flash('success','You have been logged in.');
                     res.redirect('/main/map');
+    //user is logged in forward them to the map page
                 }else{
                     req.flash('danger','Invalid password.');
                     res.redirect('/auth/login');
@@ -38,19 +39,16 @@ router.post('/login',function(req,res){
             res.redirect('/auth/login');
         }
     })
-    //do login here (check password and set session value)
-
-    //user is logged in forward them to the home page
-    // res.redirect('/');
+    //error messages
 });
 
-//GET /auth/signup
+
 //display sign up form
 router.get('/signup',function(req,res){
     res.render('auth/signup');
 });
 
-//POST /auth/signup
+
 //create new user in database
 router.post('/signup',function(req,res){
 
@@ -73,6 +71,7 @@ router.post('/signup',function(req,res){
                     };
             req.flash('success','Awesome. What do you play?');
             res.redirect('/auth/instruments');
+    //user is signed up then forwarded to the instruments page
         }else{
             req.flash('danger','e-mail already exists.');
             res.redirect('/auth/signup');
@@ -98,8 +97,7 @@ router.post('/signup',function(req,res){
         res.redirect('/auth/signup');
     })
 
-    //user is signed up forward them to the home page
-   });
+});
 
 
 //display instruments form
@@ -110,10 +108,8 @@ router.get('/instruments',function(req,res){
 
 // set instruments played to user logged in
 router.post('/instruments',function(req,res){
-    // var user = req.getUser().id check if user is logged in before proceeding.
     db.user.find(req.getUser().id).then(function(user){
-
-        db.instrument.findAll({where:{
+         db.instrument.findAll({where:{
             id:req.body.instruments
                 }}).then(function(instruments){
                     user.setInstruments(instruments);

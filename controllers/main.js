@@ -2,7 +2,7 @@ var db = require('../models');
 var express = require('express');
 var router = express.Router();
 
-//GET /
+
 //home page of site
 router.get('/',function(req,res){
     var user = req.getUser();
@@ -10,18 +10,22 @@ router.get('/',function(req,res){
 });
 
 
+// show the edit page
 router.get('/auth/edit', function(req,res){
   var user = req.getUser();
   if(user){
     db.user.find(user.id).then(function(foundUser){
       res.render('auth/edit', {user:foundUser})
     });
+    // if not signed in, prompted to do so
   }else{
     req.flash('danger','Please log in');
     res.redirect('/auth/login')
   }
 })
 
+
+// Update user info
 router.post('/auth/edit', function(req,res){
   var user = req.getUser();
 
@@ -39,12 +43,13 @@ router.post('/auth/edit', function(req,res){
 })
 
 
+// show about page
 router.get('/about', function(req,res){
   res.render('main/about')
 })
 
 
-
+// show the map page and get all user data for map
 router.get('/main/map', function(req,res){
   var user = req.getUser();
   db.user.findAll({include:[db.instrument]})
@@ -70,19 +75,6 @@ router.get('/main/map', function(req,res){
 
 });
 
-
-
-
-//GET /restricted
-//an example restricted page
-router.get('/restricted',function(req,res){
-  if(req.getUser()){
-    res.render('main/restricted');
-  }else{
-    req.flash('danger','You must be logged in to access that page.');
-    res.redirect('/');
-  }
-});
 
 
 module.exports = router;
