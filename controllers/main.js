@@ -55,21 +55,21 @@ router.get('/main/map', function(req,res){
   db.user.findAll({include:[db.instrument]})
 .then(function(users){
 
-  var cleanUsers=users.map(function(location){
+  var cleanUsers=users.map(function(user){
     return {
-      name:location.name,
-      lat:location.lat,
-      long:location.long,
-      bio:location.bio,
-      email:location.email,
-      instruments:location.instruments.map(function(i){
+      name:user.name,
+      lat:user.lat,
+      long:user.long,
+      bio:user.bio,
+      email:user.email,
+      instruments:user.instruments.map(function(i){
         return i.name;
       })
     }
   })
 
 
-  res.render('main/map',{user:user, location:cleanUsers})
+  res.render('main/map',{user:user, user:cleanUsers})
 })
 
 

@@ -6,7 +6,7 @@ var drawMap = function(markers) {
   });
   var map = L.map('map').addLayer(mapboxTiles);
 // could use the line below to set the map initially in case the user doesn't have geolocation enabled or available.
-  // map.setView([51.5286416,-0.1015987], 12);
+  map.setView([51.5286416,-0.1015987], 12);
 // uses the current location of user logged in to display a map of their area
    if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {

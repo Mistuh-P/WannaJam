@@ -126,7 +126,7 @@ module.exports = function(sequelize, DataTypes) {
           sendback(null,user);
 
 
-                })
+         })
       }
 
 
