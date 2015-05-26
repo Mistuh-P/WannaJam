@@ -6,13 +6,13 @@ var drawMap = function(markers) {
   });
   var map = L.map('map').addLayer(mapboxTiles);
 // could use the line below to set the map initially in case the user doesn't have geolocation enabled or available.
-  map.setView([51.5286416,-0.1015987], 12);
+  map.setView([47.6062100,-122.3320700], 12);
 // uses the current location of user logged in to display a map of their area
-   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      map.setView([position.coords.latitude, position.coords.longitude], 12);
-    })
-   }
+   // if (navigator.geolocation) {
+   //  navigator.geolocation.getCurrentPosition(function(position) {
+   //    map.setView([position.coords.latitude, position.coords.longitude], 12);
+   //  })
+   // }
 
    var markerLayer = L.mapbox.featureLayer();
 
@@ -46,7 +46,7 @@ var drawMap = function(markers) {
             'marker-symbol': 'music',
             'marker-color': '#fa0'
           })
-        }).addTo(markerLayer).bindPopup("Name: "+marker.name+ "<br>" + "Plays: "+ marker.instruments.join(", ") +  "<br>" + "Bio: " + marker.bio +  "<br>" + "Email: " + marker.email)
+        }).addTo(markerLayer).bindPopup("Name: "+marker.name+ "<br>" + "Plays: "+ marker.instruments.join(", ") +  "<br>" + "Bio: " + marker.bio +  "<br>" + "Send Message: (in development) ")
       })
       markerLayer.addTo(map);
     }

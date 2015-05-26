@@ -3,8 +3,10 @@
 
 
 <% if(user) { %>
-<p id='user-bar'>Welcome, <b><%= typeof user.name === 'string' ? user.name : 'Unknown' %></b>.
+<!-- <p id='user-bar'>Welcome, <b><%= typeof user.name === 'string' ? user.name : 'Guest' %></b>.
+ -->
 
+<div class='col-sm-10 col-sm-offset-2'>
 <a id='edit-instruments' class="btn log-bt1 btn-warning" href="/auth/instruments">edit instruments</a>
 <!-- <a href="/auth/signup" class="btn main-but btn-warning">Signup</a> -->
 
@@ -12,11 +14,14 @@
 
 
 <a id='logout-button' class="btn log-bt1 btn-warning" href="/auth/logout">logout</a>
-</p>
+<!-- </p> -->
+</div>
 <% } %>
 
 
-<h1 id='main-text'>Search by Instrument</h1>
+
+
+<h1 id='main-text-1'>Search by Instrument</h1>
 
 
 <!-- this is where you put your map stuff -->

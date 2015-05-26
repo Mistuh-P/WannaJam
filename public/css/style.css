@@ -1,3 +1,9 @@
+h2{
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
 #map {
   display:block;
   margin-left: auto;
@@ -67,6 +73,13 @@ margin-right: 20px;
 #main-text{
   font-family: 'Raleway', sans-serif;
   text-align: center;
+  color: white;
+}
+
+#main-text-1{
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: black;
 }
 
 .main-but{
@@ -92,13 +105,13 @@ margin-right: 20px;
 }
 
 .about{
-  width: 50%;
+  width: 80%;
 }
 
 #info{
   background:rgba(0,0,0,0.4);
   color: white;
-  font-family: 'Lobster', cursive;
+  font-family: 'Raleway', sans-serif;
 
 }
 
@@ -118,6 +131,8 @@ margin-right: 20px;
 
 }
 
+
+
 .log-bt1{
   color: black;
   font-family: 'Lobster', cursive;
@@ -131,6 +146,8 @@ margin-right: 20px;
 
 .log-bt2{
   color: black;
+
+
   font-family: 'Lobster', cursive;
   height: 50px;
   width: 150px;
@@ -145,7 +162,7 @@ margin-right: 20px;
 }
 
 #daniel{
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .index-screen{
@@ -179,4 +196,50 @@ input.inst-check{
 
 #bio-form{
   height: 40px;
+}
+
+.fontii-1{
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+}
+
+.fontii-2{
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  color: orange;
+}
+
+.sign-div{
+  background:rgba(0,0,0,0.4);
+}
+
+.sign-div-1{
+  background:rgba(0,0,0,0.7);
+}
+
+#about-info{
+  color: white;
+  text-align: center
+}
+
+.nav-style{
+  background-color: rgba(0,0,0,0.7);
+  border-color: black;
+}
+
+.navbar-default .navbar-brand {
+  color: orange;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: orange;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: white;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus  {
+  color: white;
 }

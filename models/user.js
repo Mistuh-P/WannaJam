@@ -34,7 +34,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       validate: {
         len: {
-          args: [8,200],
+          args: [4,200],
           msg: 'Password must be at least 8 characters long.'
         }
       }
@@ -80,12 +80,12 @@ module.exports = function(sequelize, DataTypes) {
     long: DataTypes.STRING,
     bio: {
       type: DataTypes.STRING,
-      validate: {
-        len: {
-          args: [1,200],
-          msg: 'Please enter a bio'
-        }
-      }
+      // validate: {
+      //   len: {
+      //     args: [1,200],
+      //     msg: 'Please enter a bio'
+      //   }
+      // }
   }
 },
   {
@@ -97,7 +97,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     hooks: {
       beforeCreate: function(user,options,sendback){
-        var addr = user.street+',' + user.city+','+user.state
+        var addr = user.street+',' + user.city
 
 
         geocoder.geocode(addr, function ( err, data ) {

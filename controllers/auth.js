@@ -102,7 +102,13 @@ router.post('/signup',function(req,res){
 
 //display instruments form
 router.get('/instruments',function(req,res){
+    var user = req.getUser();
+    if(user){
     res.render('auth/instruments');
+    }else{
+    req.flash('danger','Please log in');
+    res.redirect('/auth/login')
+  }
 });
 
 
