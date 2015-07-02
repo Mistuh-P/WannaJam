@@ -37,10 +37,12 @@ h2{
   }
 
 #main-background{
-  background-image: url("http://www.the-brook.com/wp-content/uploads/2013/01/background.jpg");
-  background-repeat: no-repeat;
+  background-image: url("/images/congruent_pentagon.png");
+  background-repeat: scroll;
   background-attachment: fixed;
 }
+
+/*http://www.the-brook.com/wp-content/uploads/2013/01/background.jpg*/
 
 .map-box{
   display: inline-block;
