@@ -208,7 +208,7 @@ input.inst-check{
 .fontii-2{
   font-family: 'Lobster', cursive;
   font-size: 20px;
-  color: orange;
+  color: green;
 }
 
 .sign-div{
@@ -230,7 +230,7 @@ input.inst-check{
 }
 
 .navbar-default .navbar-brand {
-  color: orange;
+  color: green;
 }
 
 .navbar-default .navbar-nav>li>a {
