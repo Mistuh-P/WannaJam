@@ -1,6 +1,6 @@
 <% include ../partials/header.ejs %>
 
-<div class="log-screen col-sm-6 sign-div">
+<div class="log-screen col-sm-6 col-sm-offset-3 sign-div">
     <h1 id='main-text'>Login</h1>
     <hr>
     <% include ../partials/alerts.ejs %>
@@ -9,13 +9,14 @@
         <br><br>
         <input type="password" class="log-form form-control" placeholder="Enter your password" name="password">
         <br><br>
-        <div class='col-sm-2 col-sm-offset-4'>
+        <div class='col-sm-6'>
         <input type="submit" value="Submit" class="log-bt btn btn-warning">
         </div>
+        <div class='col-sm-6'>
+    <a href="/auth/signup"  class="log-bt btn main-but btn-warning">Signup</a>
+</div>
     </form>
 
 </div>
-<div class='col-sm-6'>
-    <a href="/auth/signup" id='daniel' class="btn main-but btn-warning">Signup</a>
-</div>
+
 <% include ../partials/footer.ejs %>

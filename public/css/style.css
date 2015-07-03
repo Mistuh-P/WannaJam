@@ -75,7 +75,7 @@ margin-right: 20px;
 #main-text{
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 #main-text-1{
@@ -90,7 +90,7 @@ margin-right: 20px;
   font-size: 40px;
   color: black;
   font-family: 'Lobster', cursive;
-  padding-top: 15px;
+  padding-top: 10px;
   border-color: black;
 
 }
@@ -212,7 +212,7 @@ input.inst-check{
 }
 
 .sign-div{
-  background:rgba(0,0,0,0.4);
+  background:rgba(173, 214, 175, 0.7);
 }
 
 .sign-div-1{
@@ -225,16 +225,16 @@ input.inst-check{
 }
 
 .nav-style{
-  background-color: rgba(0,0,0,0.7);
-  border-color: black;
+  background-color: rgba(173, 214, 175, 0.7);
+  border-color: green;
 }
 
 .navbar-default .navbar-brand {
-  color: green;
+  color: black;
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: orange;
+  color: black
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
